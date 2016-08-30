@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Urejanje sporočila</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <h1>Urejanje sporočila</h1>
+    <form action="/message/{{ guestbook.key.id() }}/edit" method="post">
+            <input name="ime" value="{{ guestbook.ime }}">
+            <br>
+            <input name="email" value="{{ guestbook.email }}">
+            <br>
+            <textarea name="vnos" value="{{ guestbook.vnos }}"></textarea>
+
+            <button type="submit">Potrdi</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seznam izbrisanih sporočil</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <h1>Seznam izbrisanih sporočil</h1>
+
+    {% for guestbook in seznam %}
+        <p><a href="/message/{{ guestbook.key.id() }}/final">{{ guestbook.ime }}, {{ guestbook.email }},{{ guestbook.vnos }}, {{ guestbook.key.id() }}, {{ guestbook.nastanek }}</a></p>
+    {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+body {
+    background-color: lightsteelblue;
+}
+
+first {
+    text-align: center;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+h1 {
+    text-align: center;
+    font-family:serif;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+form {
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+button {
+    background-color: lightgray;
+    color: black;
+    padding: 3px;
+    font-size: 12px;
+    border: 1px solid black;
+    cursor: pointer;
+    min-width: 80px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+textarea {
+    display: inline-block;
+    width: 500px;
+    height: 150px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+input {
+    border: 1px solid black;
+    font-family: sans-serif;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.gumb {
+    display: inline;
+    background-color: lightgray;
+    color: black;
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-family: sans-serif;
+    margin: 0 5px 0 5px;
+}
+
+button {
+    text-align: center;
+}
+
+a:visited {
+    color: dimgrey;
+}
+

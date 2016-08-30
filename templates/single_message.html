@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sporočilo</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    <h1>Sporočilo</h1>
+
+    <p>ID sporočila: {{ guestbook.key.id() }}</p>
+    <p>Ime in priimek: {{ guestbook.ime }}</p>
+    <p>e-mail: {{ guestbook.email }}</p>
+    <p>Vsebina sporočila: {{ guestbook.vnos }}</p>
+    <p>Datum sporočila: {{ guestbook.nastanek }}</p>
+
+    <div class="gumb">
+    <a href="/message/{{ guestbook.key.id() }}/edit">Uredi</a>
+    </div>
+    <div class="gumb">
+    <a href="/message/{{ guestbook.key.id() }}/delete">Izbriši</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Izbris sporočila</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+        <h1>Ali res želite izbrisati sporočilo?</h1>
+
+        <form action="/message/{{ guestbook.key.id() }}/delete" method="post">
+                <button type="submit">Da, izbriši</button>
+        </form>
+
+</body>
+</html>
