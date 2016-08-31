@@ -8,8 +8,10 @@
 <body>
     <h1>Seznam sporočil</h1>
 
+    <div class="first">
     {% for guestbook in seznam %}
         <p><a href="/message/{{ guestbook.key.id() }}">{{ guestbook.ime }}, {{ guestbook.email }},{{ guestbook.vnos }}, {{ guestbook.key.id() }}, {{ guestbook.nastanek }}</a></p>
     {% endfor %}
+    </div>
 </body>
 </html>

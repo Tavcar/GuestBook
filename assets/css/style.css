@@ -1,9 +1,11 @@
 body {
     background-color: lightsteelblue;
+    text-align: center;
 }
 
-first {
-    text-align: center;
+.first {
+    text-align: left;
+    margin: 0 20% 0 20%;
 }
 
 p {
@@ -18,11 +20,6 @@ h1 {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-form {
-    text-align: left;
-    margin-left: 20%;
-    margin-right: 20%;
-}
 
 button {
     background-color: lightgray;
@@ -36,12 +33,15 @@ button {
     margin-top: 15px;
 }
 
+
 textarea {
     display: inline-block;
     width: 500px;
     height: 150px;
     background-color: white;
     border: 1px solid black;
+    font-family: sans-serif;
+    
 }
 
 input {
@@ -56,7 +56,7 @@ a {
 }
 
 .gumb {
-    display: inline;
+    display: inline-block;
     background-color: lightgray;
     color: black;
     padding: 5px;
@@ -76,4 +76,9 @@ button {
 a:visited {
     color: dimgrey;
 }
+
+.gumb > a:visited {
+    color: black;
+}
+
 

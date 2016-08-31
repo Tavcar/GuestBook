@@ -8,9 +8,10 @@
 <body>
     <h1>Seznam izbrisanih sporočil</h1>
 
+    <div class="first">
     {% for guestbook in seznam %}
-        <p><a href="/message/{{ guestbook.key.id() }}/final">{{ guestbook.ime }}, {{ guestbook.email }},{{ guestbook.vnos }}, {{ guestbook.key.id() }}, {{ guestbook.nastanek }}</a></p>
+        <p><a href="/message/{{ guestbook.key.id() }}/d">{{ guestbook.ime }}, {{ guestbook.email }},{{ guestbook.vnos }}, {{ guestbook.key.id() }}, {{ guestbook.nastanek }}</a></p>
     {% endfor %}
-
+    </div>
 </body>
 </html>
