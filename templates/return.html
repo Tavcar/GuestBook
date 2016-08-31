@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Povrnitev sporočila</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+        <h1>Povrnitev sporočila?</h1>
+
+        <form action="/message/{{ guestbook.key.id() }}/return" method="post">
+                <button type="submit">Povrni</button>
+        </form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dokoncen izbris</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    <h1>Dokončen izbris sporočila?</h1>
+
+    <form action="/message/{{ guestbook.key.id() }}/final" method="post">
+            <button type="submit">Izbriši</button>
+    </form>
+
+</body>
+</html>

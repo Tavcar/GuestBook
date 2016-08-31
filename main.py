@@ -42,7 +42,7 @@ class RezultatHandler(BaseHandler):
         guestbook = Guestbook(ime=ime, email=email, vnos=vnos)
         guestbook.put()
 
-        return self.write("Sporočilo je bilo uspešno oddano.")
+        return self.redirect_to("message-list")
 
 
 class SeznamSporocilHandler(BaseHandler):
@@ -101,11 +101,29 @@ class TrajenIzbrisSporocilHandler(BaseHandler):
     def get(self, guestbook_id):
         guestbook = Guestbook.get_by_id(int(guestbook_id))
         params = {"guestbook": guestbook}
-        return self.render_template("delete.html", params=params)
+        return self.render_template("final.html", params=params)
 
     def post(self, guestbook_id):
         guestbook = Guestbook.get_by_id(int(guestbook_id))
         guestbook.key.delete()
+        return self.redirect_to("deleted-list")
+
+class PosameznoDSporociloHandler(BaseHandler):
+    def get(self, guestbook_id):
+        guestbook = Guestbook.get_by_id(int(guestbook_id))
+        params = {"guestbook": guestbook}
+        return self.render_template("single_dmessage.html", params=params)
+
+class PovrnitevSporocilaHandler(BaseHandler):
+    def get(self, guestbook_id):
+        guestbook = Guestbook.get_by_id(int(guestbook_id))
+        params = {"guestbook": guestbook}
+        return self.render_template("return.html", params=params)
+
+    def post(self, guestbook_id):
+        guestbook = Guestbook.get_by_id(int(guestbook_id))
+        guestbook.deleted = False
+        guestbook.put()
         return self.redirect_to("deleted-list")
 
 
@@ -120,4 +138,6 @@ app = webapp2.WSGIApplication([
     webapp2.Route('/deleted-list', SeznamIzbrisanihSporocilHandler),
     webapp2.Route('/deleted-list', SeznamIzbrisanihSporocilHandler, name="deleted-list"),
     webapp2.Route('/message/<guestbook_id:\d+>/final', TrajenIzbrisSporocilHandler),
+    webapp2.Route('/message/<guestbook_id:\d+>/return', PovrnitevSporocilaHandler),
+    webapp2.Route('/message/<guestbook_id:\d+>/d', PosameznoDSporociloHandler),
 ], debug=True)
